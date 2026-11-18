@@ -53,7 +53,7 @@ int main() {
             lim = i;
         }
 
-        if (eof_seen >= false) {
+        if (eof_seen >= 0) {
             s[i] = c;
             lim = i;
         }
