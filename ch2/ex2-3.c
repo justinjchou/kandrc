@@ -56,6 +56,10 @@ void htoi() {
                    printf("F\n");
                 }
             }
+            // Numbers greater than 15 
+            else if (character_converted > 15) {
+                // 16 = 10, 17 = 11, 18 = 12, 19 = 13, 20 = 14, 21 = 15, 22 = 16
+            }
         }
     }
 }
