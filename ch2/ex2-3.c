@@ -26,9 +26,9 @@ void htoi() {
 
     for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF; ++i) {
         character[j] = c;
+        ++j;
+        character_converted = atoi(character);
         if (c == '\n') {
-            j = 0;
-            character_converted = atoi(character);
             if (character_converted >= 0 && character_converted <= 9) {
                 printf("%d\n", character_converted);
             }
@@ -53,10 +53,10 @@ void htoi() {
                 }
             }
             else {
-                printf("Out of range!");
+                printf("Out of range!\n");
             }
+            j = 0;
         }
-        ++j;
     }
 }
 
