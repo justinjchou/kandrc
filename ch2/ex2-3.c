@@ -16,6 +16,7 @@ int main() {
     return 0;
 } 
 
+// Convert hexadecimal to decimal
 void htoi() {
     char c;
     int i;
@@ -24,43 +25,38 @@ void htoi() {
     int character_converted;
 
     for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF; ++i) {
-        // Take the line, and convert to integer using atoi
         character[j] = c;
-        ++j;
-        if (c == '\n')
-        {
-            j = 0;  
+        if (c == '\n') {
+            j = 0;
             character_converted = atoi(character);
-            // Take the converted character and then change it to hex
-            if (character_converted >= 0 && character_converted <= 9)
-            {
-               printf("%d\n", character_converted);
+            if (character_converted >= 0 && character_converted <= 9) {
+                printf("%d\n", character_converted);
             }
             else if (character_converted >= 10 && character_converted <= 15) {
                 if (character_converted == 10) {
-                   printf("A\n");
+                    printf("A\n");
                 }
                 if (character_converted == 11) {
-                   printf("B\n");
+                    printf("B\n");
                 }
                 if (character_converted == 12) {
-                   printf("C\n");
+                    printf("C\n");
                 }
                 if (character_converted == 13) {
-                   printf("D\n");
+                    printf("D\n");
                 }
                 if (character_converted == 14) {
-                   printf("E\n");
+                    printf("E\n");
                 }
                 if (character_converted == 15) {
-                   printf("F\n");
+                    printf("F\n");
                 }
             }
-            // Numbers greater than 15 
-            else if (character_converted > 15) {
-                // 16 = 10, 17 = 11, 18 = 12, 19 = 13, 20 = 14, 21 = 15, 22 = 16
+            else {
+                printf("Out of range!");
             }
         }
+        ++j;
     }
 }
 
