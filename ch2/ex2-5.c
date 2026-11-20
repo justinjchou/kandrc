@@ -7,20 +7,29 @@ void any(char s1[], char s2[]);
 int main()
 {
     char test_string[12] = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};
-    char test_any[2] = {'e', 'o'};
+    char test_any[3] = {'e', 'o', 'x'};
 
     any(test_string, test_any);
 }
 
 void any(char s1[], char s2[])
 {
+    int found = -1;
+    int found2 = -1;
+    int found3 = -1;
     for (int i = 0; s1[i] != '\0'; i++)
     {
-        if (s1[i] == s2[0] || s1[i] == s2[1]) {
-            printf("%d\n", i);
+        if (s1[i] == s2[0]) {
+            found = i;
         }
-        else {
-            printf("%d\n", -1);
+        else if (s1[i] == s2[1]) {
+            found2 = i;
+        }
+        else if (s1[i] == s2[2]) {
+            found2 = i;
         }
     }
+    printf("%d \n", found);
+    printf("%d \n", found2);
+    printf("%d \n", found3);
 }
