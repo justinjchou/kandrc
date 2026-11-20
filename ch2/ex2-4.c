@@ -1,25 +1,26 @@
 /* Exercise 2-4 Write an alternative version of squeeze (s1, s2) that deletes each character in s1 that matches any character in string s2. */
 
 #include <stdio.h>
-void squeeze(char s[], int c);
+void squeeze(char s[], char c[]);
 
 int main() 
 {
     char test_string[12] = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};
+    char test_squeezer[2] = {'e', 'o'};
 
-    squeeze(test_string, 'e');
+    squeeze(test_string, test_squeezer);
     printf("%s", test_string);
     
     return 0;
 }
 
-void squeeze(char s[], int c) 
+void squeeze(char s[], char c[]) 
 {
     int i, j;
 
     for (i = j = 0; s[i] != '\0'; i++)
     {
-        if (s[i] != c) {
+        if (s[i] != c[0] && s[i] != c[1]) {
             s[j++] = s[i];
             printf("s[%d] %c\n", j - 1, s[j - 1]);
         }
