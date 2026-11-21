@@ -1,7 +1,0 @@
-Compiler takes in unsigned char
-FF is 256
-
-Compiler takes in signed char 
-FF is 255 or -1 depending on sign passed in
-
-So why do we need unsigned in the first place?
