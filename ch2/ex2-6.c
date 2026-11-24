@@ -10,6 +10,7 @@ int main()
 	printf("%d\n", setbits(180, 3, 13, 3));
 }
 
+/* Write a function setbits that returns integer_to_change with the rightmost bits that begin at position set to the rightmost bits of bit_flipper, leaving the other bits unchanged.*/
 int setbits(int integer_to_change, int position, int rightmost, int bit_flipper) 
 {
     int answer = 0;
@@ -24,8 +25,6 @@ int setbits(int integer_to_change, int position, int rightmost, int bit_flipper)
 	//  Answer = 10101100
 	//  Answer = 172 
 
-    // Convert decimal to hex
-
     // Mask the bit_flipper bits to the left
     int bit_flipper_converted;
     bit_flipper_converted = bitconverter(bit_flipper);
@@ -36,7 +35,7 @@ int setbits(int integer_to_change, int position, int rightmost, int bit_flipper)
     rightmost = rightmost << (position);
     printf("rightmost %d\n", rightmost);
 
-    answer = integer_to_change ^ rightmost;
+    //
 
 	return answer;
 }
