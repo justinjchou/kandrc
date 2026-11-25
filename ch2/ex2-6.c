@@ -35,7 +35,23 @@ int setbits(int integer_to_change, int position, int rightmost, int bit_flipper)
     rightmost = rightmost << (position);
     printf("rightmost %d\n", rightmost);
 
+
+    //10110100
+    //00101000 
     //
+    //10110100
+    //10010100
+    //10010100 
+    //
+    //10010100
+    //00101000 
+    //10111100
+    int answer_unary; 
+    answer_unary = integer_to_change & ~rightmost;
+    printf("answer & ~rightmost %d\n", answer_unary);
+
+    answer = integer_to_change | answer_unary;
+    printf("answer | answer_unary %d\n", answer);
 
 	return answer;
 }
