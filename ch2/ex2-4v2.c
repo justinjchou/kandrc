@@ -13,19 +13,19 @@ int main()
     char s[MAX];
     char s_removed[MAX];
     int remover;
-    // char test_squeezer[2] = {'e', 'o'};
 
-    printf("Type your string\n");
-    while((c=getchar()) != '\n')
+
+    printf("Type the character(s) to remove\n");
+    remover = getchar();
+
+    // Take the string from the file and add it to an array to be used for comparison
+    while((c=getchar()) != EOF)
     {
         s[i] = c;
         ++i;
     }
     s[i] = '\0';
-    printf("s %s\n", s);
-
-    printf("Type the character(s) to remove\n");
-    remover = getchar();
+    // printf("s %s\n", s);
 
     squeeze(s, s_removed, remover);
     printf("String with the desired character(s) removed\n%s", s_removed);
@@ -39,7 +39,11 @@ int main()
  *  copy that string to an array
  *  parse out the characters to be removed 
  *  loop through the characters to be removed and check against the input
- */ 
+*/ 
+/* TODO 
+ * Take the string from the text file and remove multiple characters
+ * 1) Take text from file and remove based on input desired
+*/
 void squeeze(char s[], char s_removed[], int remover) 
 {
     int i, j;
